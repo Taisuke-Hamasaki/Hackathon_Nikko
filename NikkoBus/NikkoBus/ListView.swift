@@ -10,6 +10,9 @@ import UIKit
 
 class ListView: UIViewController {
     
+    let myWindow = UIWindow()
+    let myWindowButton = UIButton()
+    
     var ws: WindowSize = WindowSize()
     
     
@@ -32,7 +35,7 @@ class ListView: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         // Background Color
-        view.backgroundColor = UIColor.cyanColor()
+        view.backgroundColor = UIColor.whiteColor()
         
         //var ws = WindowSize()
         var nButtons: CGFloat = CGFloat(busStations.count) ////// the number of all buttons
@@ -44,7 +47,7 @@ class ListView: UIViewController {
         var iconSize:CGFloat = size * (3/5);
         var iconX0: CGFloat = 2;
         
-        putImage("currentBusStation", x: 0-15, y: 0, width: ws.width*1.35, height: yStart-1)
+        putImage("currentBusStation", x: 0-25, y: 0, width: ws.width*1.44, height: yStart-1)
         //putImage("currentBusStop", x: iconX0, y: (size-iconSize)/2, width: iconSize, height: iconSize)
         var yy0 = yStart;
         for i in 0 ... Int(nButtons)-1{
@@ -54,8 +57,14 @@ class ListView: UIViewController {
             putButton(busStations[i], x0:x0, y0: yy0, width: ws.width, height: size, tag: i)
             //putCircleButton(x0, y0: yy0, width: ws.width, height: size, tag: i)
             
-            putImage("busStop", x: iconX0, y: yy0+(size-iconSize)/2, width: iconSize, height: iconSize)
-            //putButton(<#str: NSString#>, x0: iconX0, y0: yy0+(size-iconSize)/2, width: iconSize, height: iconSize, tag: i)
+            putImage("busStop", x: iconX0, y: yy0+(size-iconSize)/2, width: iconSize*(4/5), height: iconSize)
+            if i == 3 {
+                //putImageButton("shrine", x: iconX0, y: yy0+(size-iconSize)/2, width: iconSize, height: iconSize, tag: i+1000)
+                
+                //putImageButton(filename: NSString, x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, tag: Int) {
+                    
+
+            }
             yy0 = yy0 + size + interval;
 //            yy0 = yy0 + interval;
             
@@ -142,7 +151,7 @@ class ListView: UIViewController {
         myButton.tag = tag
         
         myButton.titleLabel!.font = UIFont.boldSystemFontOfSize(UIFont.labelFontSize())
-        myButton.titleLabel!.font = UIFont.systemFontOfSize(CGFloat(22))
+        myButton.titleLabel!.font = UIFont.systemFontOfSize(CGFloat(24))
         
         /*
         // カスタムしたフォントサイズ(20)の文字列を..ラベルに表示する.
@@ -170,54 +179,6 @@ class ListView: UIViewController {
     }
     
     
-    // ボタンを定義.
-    let myInfoDarkButton: UIButton = UIButton.buttonWithType(UIButtonType.InfoDark) as UIButton
-    //let myInfoLightButton: UIButton = UIButton.buttonWithType(UIButtonType.InfoLight) as UIButton
-    //let myAddButton: UIButton = UIButton.buttonWithType(UIButtonType.ContactAdd) as UIButton
-    //let myDetailButton: UIButton = UIButton.buttonWithType(UIButtonType.DetailDisclosure) as UIButton
-    //let mySystemButton: UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
-    
-    
-    func putCircleButton(x0:CGFloat, y0:CGFloat, width:CGFloat, height:CGFloat, tag:Int) {
-        //NSLog("\(x0), \(y0), \(width), \(height)")
-        
-        // ボタンの位置を指定する.
-        myInfoDarkButton.layer.position = CGPoint(x: x0, y: y0)
-        //myInfoLightButton.layer.position = CGPoint(x: self.view.frame.width/2, y:100)
-        //myAddButton.layer.position = CGPoint(x: self.view.frame.width/2, y:150)
-        //myDetailButton.layer.position = CGPoint(x: self.view.frame.width/2, y:200)
-        
-        // mySystemButtonに枠を追加する.
-        //mySystemButton.frame = CGRectMake(0, 0, 200, 50)
-        
-        // mySystemButtonの位置を設定する.
-        //mySystemButton.layer.position = CGPoint(x: self.view.frame.width/2, y:250)
-        
-        // mySystemButtonにタイトルを設定する.
-        //mySystemButton.setTitle("mySystemButton", forState: UIControlState.Normal)
-        
-        // タグを設定する.
-        myInfoDarkButton.tag = 1
-        //myInfoLightButton.tag = 2
-        //myAddButton.tag = 3
-        //myDetailButton.tag = 4
-        //mySystemButton.tag = 5
-        
-        // イベントを追加する.
-        ////myInfoDarkButton.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
-        //myInfoLightButton.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
-        //myAddButton.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
-        //myDetailButton.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
-        //mySystemButton.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
-        
-        // ボタンをViewに追加する.
-        self.view.addSubview(myInfoDarkButton)
-        //self.view.addSubview(myInfoLightButton)
-        //self.view.addSubview(myAddButton)
-        //self.view.addSubview(myDetailButton)
-        //self.view.addSubview(mySystemButton)
-    }
-    
     func putImage(filename: NSString, x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
         // UIImageViewを作成する.
         let myImageView: UIImageView = UIImageView(frame: CGRectMake(x, y, width, height))
@@ -236,6 +197,83 @@ class ListView: UIViewController {
         
     }
     
+    func putImageButton(filename: NSString, x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, tag: Int) {
+    
+    let image = UIImage(named: filename)
+    let imageButton   = UIButton()
+    imageButton.tag = tag
+    imageButton.frame = CGRectMake(0, 0, width, height)
+    //imageButton.layer.position = CGPoint(x: self.view.frame.width/2, y:450)
+    imageButton.setImage(image, forState: .Normal)
+    
+    imageButton.addTarget(self, action: "onClickInfo:", forControlEvents:.TouchUpInside)
+    self.view.addSubview(imageButton)
+    
+        /*
+    // UIImageViewを作成する.
+    let myImageView: UIImageView = UIImageView(frame: CGRectMake(x, y, width, height))
+    
+    // 表示する画像を設定する.
+    let myImage = UIImage(named: filename)
+    
+    // 画像をUIImageViewに設定する.
+    myImageView.image = myImage
+    
+    // 画像の表示する座標を指定する.
+    //myImageView.layer.position = CGPoint(x: x, y: y)
+    
+    // UIImageViewをViewに追加する.
+    self.view.addSubview(myImageView)
+    */
+    }
+
+    
+    
+    /*
+    自作Windowを生成する
+    */
+    func makeMyWindow(){
+        
+        // 背景を白に設定する.
+        myWindow.backgroundColor = UIColor.whiteColor()
+        myWindow.frame = CGRectMake(0, 0, 200, 250)
+        myWindow.layer.position = CGPointMake(self.view.frame.width/2, self.view.frame.height/2)
+        myWindow.alpha = 0.8
+        myWindow.layer.cornerRadius = 20
+        
+        // myWindowをkeyWindowにする.
+        myWindow.makeKeyWindow()
+        
+        // windowを表示する.
+        self.myWindow.makeKeyAndVisible()
+        
+        // ボタンを作成する.
+        myWindowButton.frame = CGRectMake(0, 0, 100, 60)
+        myWindowButton.backgroundColor = UIColor.orangeColor()
+        myWindowButton.setTitle("Close", forState: .Normal)
+        myWindowButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        myWindowButton.layer.masksToBounds = true
+        myWindowButton.layer.cornerRadius = 20.0
+        myWindowButton.layer.position = CGPointMake(self.myWindow.frame.width/2, self.myWindow.frame.height-50)
+        myWindowButton.addTarget(self, action: "onClickMyInfo:", forControlEvents: .TouchUpInside)
+        self.myWindow.addSubview(myWindowButton)
+        
+        // TextViewを作成する.
+        let myTextView: UITextView = UITextView(frame: CGRectMake(10, 10, self.myWindow.frame.width - 20, 150))
+        myTextView.backgroundColor = UIColor.clearColor()
+        myTextView.text = "大内宿は、会津城下と下野の国（日光今市）を結ぶ32里の区間の中で会津から2番目の宿駅として1640年ごろに整備された宿場町です。"
+        myTextView.font = UIFont.systemFontOfSize(CGFloat(15))
+        myTextView.textColor = UIColor.blackColor()
+        myTextView.textAlignment = NSTextAlignment.Left
+        myTextView.editable = false
+        
+        self.myWindow.addSubview(myTextView)
+    }
+    
+    
+    
+    
+    
     // myButtonNext.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside) <-
     //
     // ボタンイベント
@@ -250,6 +288,23 @@ class ListView: UIViewController {
         
         // Viewの移動する.
         self.presentViewController(myThirdViewController, animated: true, completion: nil)
+        
+    }
+    
+    func onClickMyInfo(sender: UIButton) {
+        //let myInfoViewController: UIViewController = InfoView()
+        
+        //myInfoViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+        
+        // Viewの移動する.
+        //self.presentViewController(myThirdViewController, animated: true, completion: nil)
+        
+        if sender == myWindowButton {
+            myWindow.hidden = true
+        } else {
+            makeMyWindow()
+        }
+
         
     }
     
