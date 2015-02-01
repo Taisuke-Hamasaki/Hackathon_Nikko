@@ -59,7 +59,7 @@ class ListView: UIViewController {
             
             putImage("busStop", x: iconX0, y: yy0+(size-iconSize)/2, width: iconSize*(4/5), height: iconSize)
             if i == 3 {
-                //putImageButton("shrine", x: iconX0, y: yy0+(size-iconSize)/2, width: iconSize, height: iconSize, tag: i+1000)
+                putImageButton("shrine", x: iconX0, y: yy0+(size-iconSize)/2, width: iconSize, height: iconSize, tag: i+1000)
                 
                 //putImageButton(filename: NSString, x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, tag: Int) {
                     
@@ -299,12 +299,14 @@ class ListView: UIViewController {
         // Viewの移動する.
         //self.presentViewController(myThirdViewController, animated: true, completion: nil)
         
+        /*
         if sender == myWindowButton {
             myWindow.hidden = true
         } else {
             makeMyWindow()
         }
-
+        */
+        println("absdf")
         
     }
     
