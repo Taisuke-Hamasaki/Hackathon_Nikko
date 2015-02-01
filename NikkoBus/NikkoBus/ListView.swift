@@ -12,6 +12,7 @@ class ListView: UIViewController {
     
     var ws: WindowSize = WindowSize()
     
+    /*
     var busStations: [NSString] = ["東武日光駅",
         "Ishiya-machi",
         "Goko-machi",
@@ -19,7 +20,7 @@ class ListView: UIViewController {
         "Shinkyo",
         "Nishisando",
         "Nikko Botanical Garden"]
-    
+    */
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +42,7 @@ class ListView: UIViewController {
             //putButton(x1, y0: yy0, width: ws.width, height: size, tag: i)
             //putCircleButton(x1, y0: yy0, width: ws.width, height: size, tag: i)
             
-            putImage(busStations[i], x: 0, y: 0, width: 100, height: 100)
+            putImage("aa", x: 0, y: 0, width: 100, height: 100)
             yy0 = yy0 + interval;
             
         
