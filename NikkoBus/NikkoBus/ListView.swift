@@ -12,22 +12,26 @@ class ListView: UIViewController {
     
     var ws: WindowSize = WindowSize()
     
-    /*
-    var busStations: [NSString] = ["東武日光駅",
+    
+    var busStations: [NSString] =
+      [ "Tobu Nikko",
         "Ishiya-machi",
         "Goko-machi",
-        "Nikko kyodosentamae",
+        "Nikko yodosentamae",
         "Shinkyo",
         "Nishisando",
         "Nikko Botanical Garden"]
-    */
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // Background Color
+        view.backgroundColor = UIColor.cyanColor()
+        
         //var ws = WindowSize()
-        var nButtons: CGFloat = 10 ////// the number of all buttons
+        var nButtons: CGFloat = CGFloat(busStations.count) ////// the number of all buttons
         var nShowButtons: CGFloat = 6 // the number of showing buttons on the display
         var interval: CGFloat = 2 // [pixel]
         let size: CGFloat = ws.height / nShowButtons
@@ -36,7 +40,7 @@ class ListView: UIViewController {
         var iconSize:CGFloat = size * (3/5);
         var iconX0: CGFloat = 2;
         
-        putImage("bussStop", x: 0, y: 0, width: ws.width, height: yStart-1)
+        putImage("currentBusStation", x: 0, y: 0, width: ws.width*1.1, height: yStart-1)
         var yy0 = yStart;
         for i in 0 ... Int(nButtons)-1{
             var x1: CGFloat = interval
@@ -45,7 +49,7 @@ class ListView: UIViewController {
             putButton(x1, y0: yy0, width: ws.width, height: size, tag: i)
             //putCircleButton(x1, y0: yy0, width: ws.width, height: size, tag: i)
             
-            putImage("bussStop", x: iconX0, y: yy0+iconSize/2, width: iconSize, height: iconSize)
+            putImage(busStations[i], x: iconX0, y: yy0+iconSize/2, width: iconSize, height: iconSize)
             yy0 = yy0 + size + interval;
 //            yy0 = yy0 + interval;
             
@@ -105,7 +109,7 @@ class ListView: UIViewController {
         myButton.frame = CGRectMake(x0, y0, width, height)
         
         // 背景色を設定する.
-        myButton.backgroundColor = UIColor.blueColor()
+        myButton.backgroundColor = UIColor.whiteColor()
         
         // mySystemButtonに枠を追加する.
         //myButton.frame = CGRectMake(x0, y0, width, height)
@@ -131,7 +135,9 @@ class ListView: UIViewController {
         myButton.tag = tag
         
         // イベントを追加する.
-        //myButton.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
+        if tag == 3 {
+            myButton.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
+        }
         
         // ボタンをViewに追加する.
         self.view.addSubview(myButton)
@@ -147,7 +153,7 @@ class ListView: UIViewController {
     
     
     func putCircleButton(x0:CGFloat, y0:CGFloat, width:CGFloat, height:CGFloat, tag:Int) {
-        NSLog("\(x0), \(y0), \(width), \(height)")
+        //NSLog("\(x0), \(y0), \(width), \(height)")
         
         // ボタンの位置を指定する.
         myInfoDarkButton.layer.position = CGPoint(x: x0, y: y0)
