@@ -22,6 +22,10 @@ class ListView: UIViewController {
         "Nishisando",
         "Nikko Botanical Garden"]
     
+    var busIconNames: [NSString] =
+      [ "",
+        "",
+        ""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,14 +44,14 @@ class ListView: UIViewController {
         var iconSize:CGFloat = size * (3/5);
         var iconX0: CGFloat = 2;
         
-        putImage("currentBusStation", x: 0, y: 0, width: ws.width*1.1, height: yStart-1)
+        putImage("currentBusStation", x: 0, y: 0, width: ws.width*1.2, height: yStart-1)
         var yy0 = yStart;
         for i in 0 ... Int(nButtons)-1{
-            var x1: CGFloat = interval
+            var x0: CGFloat = interval
             //var y1: CGFloat = size * CGFloat(i)
             //var y2: CGFloat = y1 + size
-            putButton(x1, y0: yy0, width: ws.width, height: size, tag: i)
-            //putCircleButton(x1, y0: yy0, width: ws.width, height: size, tag: i)
+            putButton(busStations[i], x0:x0, y0: yy0, width: ws.width, height: size, tag: i)
+            //putCircleButton(x0, y0: yy0, width: ws.width, height: size, tag: i)
             
             putImage(busStations[i], x: iconX0, y: yy0+iconSize/2, width: iconSize, height: iconSize)
             yy0 = yy0 + size + interval;
@@ -100,7 +104,7 @@ class ListView: UIViewController {
         self.view.addSubview(myLabel)
     }
     
-    func putButton(x0:CGFloat, y0:CGFloat, width:CGFloat, height:CGFloat, tag:Int) {
+    func putButton(str: NSString, x0:CGFloat, y0:CGFloat, width:CGFloat, height:CGFloat, tag:Int) {
         NSLog("\(x0), \(y0), \(width), \(height)")
         
         let myButton: UIButton = UIButton()
@@ -118,12 +122,13 @@ class ListView: UIViewController {
         myButton.layer.masksToBounds = true
         
         // タイトルを設定する(通常時).
-        myButton.setTitle("\(x0), \(y0)", forState: UIControlState.Normal)
-        myButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        myButton.setTitle(str, forState: UIControlState.Normal)
+        myButton.setTitleColor(UIColor.cyanColor(), forState: UIControlState.Normal)
+
         
         // タイトルを設定する(ボタンがハイライトされた時).
-        myButton.setTitle("ボタン(押された時)", forState: UIControlState.Highlighted)
-        myButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Highlighted)
+        myButton.setTitle(str, forState: UIControlState.Highlighted)
+        myButton.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Highlighted)
         
         // コーナーの半径を設定する.
         myButton.layer.cornerRadius = 2.0
@@ -134,8 +139,27 @@ class ListView: UIViewController {
         // タグを設定する.
         myButton.tag = tag
         
+        myButton.titleLabel!.font = UIFont.boldSystemFontOfSize(UIFont.labelFontSize())
+        myButton.titleLabel!.font = UIFont.systemFontOfSize(CGFloat(22))
+        
+        /*
+        // カスタムしたフォントサイズ(20)の文字列を..ラベルに表示する.
+        let myCustomLabel: UILabel = UILabel()
+        myButton.font = UIFont.systemFontOfSize(CGFloat(20))
+        //myCustomLabel.text = "ポイント20のフォントサイズ"
+        //myCustomLabel.frame = CGRect(x: 25, y: 90, width: 300, height: 150)
+        
+        let myBoldLabel: UILabel = UILabel()
+        myBoldLabel.font = UIFont.boldSystemFontOfSize(UIFont.labelFontSize())
+        myBoldLabel.text = "Boldフォント"
+        myBoldLabel.frame = CGRect(x: 25, y: 180, width: 300, height: 150)
+        self.view.addSubview(myBoldLabel)
+        */
+        
         // イベントを追加する.
         if tag == 3 {
+            var iconSize: CGFloat = height;
+            putImage("shrine", x: ws.width-iconSize, y: y0, width: iconSize, height: iconSize)
             myButton.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
         }
         
