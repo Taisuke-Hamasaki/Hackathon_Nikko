@@ -168,12 +168,12 @@ class ListView: UIViewController {
         //self.view.addSubview(mySystemButton)
     }
     
-    func putImage(S: UIImageView, x: CGFloat, y: CGFloat) {
+    func putImage(filename: NSSting : UIImageView, x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
         // UIImageViewを作成する.
-        let myImageView: UIImageView = UIImageView(frame: CGRectMake(0,0,100,120))
+        let myImageView: UIImageView = UIImageView(frame: CGRectMake(x, y, width, height))
         
         // 表示する画像を設定する.
-        let myImage = UIImage(named: "logo.png")
+        let myImage = UIImage(named: filename)
         
         // 画像をUIImageViewに設定する.
         myImageView.image = myImage
@@ -183,7 +183,6 @@ class ListView: UIViewController {
         
         // UIImageViewをViewに追加する.
         self.view.addSubview(myImageView)
-        
         
     }
     
