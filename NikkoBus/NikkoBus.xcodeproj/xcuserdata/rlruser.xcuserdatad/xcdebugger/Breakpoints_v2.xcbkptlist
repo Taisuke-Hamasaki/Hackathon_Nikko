@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NikkoBus/BeaconIO.swift"
+            timestampString = "444460653.464277"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
+            landmarkName = "locationManager(_:didRangeBeacons:inRegion:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NikkoBus.BeaconIO.locationManager (NikkoBus.BeaconIO)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.CLLocationManager&gt;, didRangeBeacons : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSArray&gt;, inRegion : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.CLBeaconRegion&gt;) -&gt; ()"
+                  moduleName = "NikkoBus"
+                  urlString = "file:///Users/rlruser/Documents/Hackathon_Nikko/NikkoBus/NikkoBus/BeaconIO.swift"
+                  timestampString = "444460144.315494"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "204"
+                  endingLineNumber = "204"
+                  offsetFromSymbolStart = "2256">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NikkoBus.BeaconIO.locationManager (NikkoBus.BeaconIO)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.CLLocationManager&gt;, didRangeBeacons : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSArray&gt;, inRegion : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.CLBeaconRegion&gt;) -&gt; ()"
+                  moduleName = "NikkoBus"
+                  urlString = "file:///Users/rlruser/Documents/Hackathon_Nikko/NikkoBus/NikkoBus/BeaconIO.swift"
+                  timestampString = "444460144.315787"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "204"
+                  endingLineNumber = "204"
+                  offsetFromSymbolStart = "2676">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

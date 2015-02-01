@@ -20,7 +20,7 @@ class BeaconIO: UIViewController,UITableViewDelegate, UITableViewDataSource, CLL
     var isDisplayStationView: Bool!
     var isDisplayBusView: Bool!
     var myButtonNext: UIButton!
-    
+    var DEBUG: Bool!
 
     
     let myButton: UIButton = UIButton()
@@ -28,6 +28,8 @@ class BeaconIO: UIViewController,UITableViewDelegate, UITableViewDataSource, CLL
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        DEBUG = false;
         
         // ロケーションマネージャの作成.
         myLocationManager = CLLocationManager()
@@ -46,7 +48,7 @@ class BeaconIO: UIViewController,UITableViewDelegate, UITableViewDataSource, CLL
         }
         
         // BeaconのUUIDを設定.
-        let uuid:NSUUID? = NSUUID(UUIDString: "CB86BC31-05BD-40CC-903D-1C9BD13D9661")
+        let uuid:NSUUID? = NSUUID(UUIDString: "CB86BC31-05BD-40CC-903D-1C9BD13D966A")
         
         // BeaconのIfentifierを設定.
         let identifierStr:NSString = "akabeacon"
@@ -78,10 +80,14 @@ class BeaconIO: UIViewController,UITableViewDelegate, UITableViewDataSource, CLL
         //self.view.addSubview(myTableView)
         
         
+        // 背景色をGreenに設定する.
+        self.view.backgroundColor = UIColor.cyanColor()
         
+        
+        if(DEBUG == true){
         // ボタンの生成する.
         myButtonNext = UIButton(frame: CGRectMake(0,0,120,50))
-        myButtonNext.backgroundColor = UIColor.redColor();
+        myButtonNext.backgroundColor = UIColor.blueColor();
         myButtonNext.layer.masksToBounds = true
         myButtonNext.setTitle("Next", forState: .Normal)
         myButtonNext.layer.cornerRadius = 20.0
@@ -90,6 +96,7 @@ class BeaconIO: UIViewController,UITableViewDelegate, UITableViewDataSource, CLL
         
         // ボタンを追加する.
         self.view.addSubview(myButtonNext);
+        }
         
     }
     
@@ -201,9 +208,17 @@ class BeaconIO: UIViewController,UITableViewDelegate, UITableViewDataSource, CLL
                 
                 var proximity = ""
                 
-                if(majorID == 1 && minorID == 1 && isDisplayBusView == false){
+                if(minorID == 1){
                     isDisplayBusView = true
-                    self.view.addSubview(myButton)
+                    //self.view.addSubview(myButton)
+                    // 遷移するViewを定義する.
+                    let mySecondViewController: UIViewController = ListView()
+                    
+                    // アニメーションを設定する.
+                    mySecondViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+                    
+                    // Viewの移動する.
+                    self.presentViewController(mySecondViewController, animated: true, completion: nil)
                 }
                 
                 switch (beacon.proximity) {
