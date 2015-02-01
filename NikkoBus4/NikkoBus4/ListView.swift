@@ -14,7 +14,7 @@ class ListView: UIViewController {
     
     
     var busStations: [NSString] =
-    [ "Tobu Nikko",
+      [ "Tobu Nikko",
         "Ishiya-machi",
         "Goko-machi",
         "Nikko yodosentamae",
@@ -47,11 +47,22 @@ class ListView: UIViewController {
             //var y1: CGFloat = size * CGFloat(i)
             //var y2: CGFloat = y1 + size
             putButton(x1, y0: yy0, width: ws.width, height: size, tag: i)
-                //putCircleButton(x1, y0: yy0, width: ws.width, height: size, tag: i)
-                         yy0 = yy0 + size + interval;
-            //            yy0 = yy0 + interval;
+            //putCircleButton(x1, y0: yy0, width: ws.width, height: size, tag: i)
             
+            putImage("busStop", x: iconX0, y: yy0+(size-iconSize)/2, width: iconSize*(4/5), height: iconSize)
+            if i == 3 {
+                //putImageButton("shrine", x: iconX0, y: yy0+(size-iconSize)/2, width: iconSize, height: iconSize, tag: i+1000)
+                
+                //putImageButton(filename: NSString, x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, tag: Int) {
+                    
+
+            }
+            putImage(busStations[i], x: iconX0, y: yy0+iconSize/2, width: iconSize, height: iconSize)
+
+            yy0 = yy0 + size + interval;
+//            yy0 = yy0 + interval;
             
+        
         }
         
         
@@ -224,4 +235,24 @@ class ListView: UIViewController {
         self.presentViewController(myThirdViewController, animated: true, completion: nil)
         
     }
+    
+    func onClickMyInfo(sender: UIButton) {
+        //let myInfoViewController: UIViewController = InfoView()
+        
+        //myInfoViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+        
+        // Viewの移動する.
+        //self.presentViewController(myThirdViewController, animated: true, completion: nil)
+        
+        /*
+        if sender == myWindowButton {
+            myWindow.hidden = true
+        } else {
+            makeMyWindow()
+        }
+        */
+        println("absdf")
+        
     }
+    
+}
