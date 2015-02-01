@@ -168,7 +168,7 @@ class ViewController: UIViewController {
         //self.view.addSubview(mySystemButton)
     }
     
-    func putImage(S: UIImageView, x: CGFloat, y: CGFloat) {
+    func putImage(str: : UIImageView, x: CGFloat, y: CGFloat) {
         // UIImageViewを作成する.
         let myImageView: UIImageView = UIImageView(frame: CGRectMake(0,0,100,120))
         

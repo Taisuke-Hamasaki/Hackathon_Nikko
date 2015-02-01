@@ -15,6 +15,7 @@
 		530117211A7DBB4800D274EA /* NikkoBusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530117201A7DBB4800D274EA /* NikkoBusTests.swift */; };
 		5301172B1A7DBB9000D274EA /* BeaconIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5301172A1A7DBB9000D274EA /* BeaconIO.swift */; };
 		906F78DB1A7DE1FC006300F9 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906F78DA1A7DE1FC006300F9 /* ListView.swift */; };
+		906F78DE1A7DE48F006300F9 /* WindowSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906F78DD1A7DE48F006300F9 /* WindowSize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		5301172A1A7DBB9000D274EA /* BeaconIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconIO.swift; sourceTree = "<group>"; };
 		5303606B1A7DE35900C6F020 /* iBeaconView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iBeaconView.xcodeproj; path = NikkoBus/iBeaconView/iBeaconView.xcodeproj; sourceTree = "<group>"; };
 		906F78DA1A7DE1FC006300F9 /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		906F78DD1A7DE48F006300F9 /* WindowSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowSize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		530117071A7DBB4800D274EA /* NikkoBus */ = {
 			isa = PBXGroup;
 			children = (
+				906F78DD1A7DE48F006300F9 /* WindowSize.swift */,
 				5301170A1A7DBB4800D274EA /* AppDelegate.swift */,
 				5301170C1A7DBB4800D274EA /* ViewController.swift */,
 				5301170E1A7DBB4800D274EA /* Main.storyboard */,
@@ -268,6 +271,7 @@
 			files = (
 				906F78DB1A7DE1FC006300F9 /* ListView.swift in Sources */,
 				5301172B1A7DBB9000D274EA /* BeaconIO.swift in Sources */,
+				906F78DE1A7DE48F006300F9 /* WindowSize.swift in Sources */,
 				5301170D1A7DBB4800D274EA /* ViewController.swift in Sources */,
 				5301170B1A7DBB4800D274EA /* AppDelegate.swift in Sources */,
 			);
