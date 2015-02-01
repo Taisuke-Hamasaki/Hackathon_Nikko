@@ -80,10 +80,17 @@ class BeaconIO: UIViewController,UITableViewDelegate, UITableViewDataSource, CLL
         //self.view.addSubview(myTableView)
         
         
-        // 背景色をGreenに設定する.
-        self.view.backgroundColor = UIColor.cyanColor()
-        
-        
+     //UIntに16進で数値をいれるとUIColorが戻る関数
+func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+    return UIColor(
+        red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+        green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+        blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+        alpha: CGFloat(1.0)
+    )
+}
+//こんな感じで利用します。
+view.backgroundColor = UIColorFromRGB(0x339999)
         if(DEBUG == true){
         // ボタンの生成する.
         myButtonNext = UIButton(frame: CGRectMake(0,0,120,50))
@@ -100,6 +107,7 @@ class BeaconIO: UIViewController,UITableViewDelegate, UITableViewDataSource, CLL
         
     }
     
+   
     /*
     (Delegate) 認証のステータスがかわったら呼び出される.
     */
