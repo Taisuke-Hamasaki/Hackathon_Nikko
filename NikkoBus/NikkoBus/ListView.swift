@@ -44,7 +44,7 @@ class ListView: UIViewController {
         var iconSize:CGFloat = size * (3/5);
         var iconX0: CGFloat = 2;
         
-        putImage("currentBusStation", x: 0, y: 0, width: ws.width*1.35, height: yStart-1)
+        putImage("currentBusStation", x: 0-15, y: 0, width: ws.width*1.35, height: yStart-1)
         //putImage("currentBusStop", x: iconX0, y: (size-iconSize)/2, width: iconSize, height: iconSize)
         var yy0 = yStart;
         for i in 0 ... Int(nButtons)-1{
@@ -54,7 +54,7 @@ class ListView: UIViewController {
             putButton(busStations[i], x0:x0, y0: yy0, width: ws.width, height: size, tag: i)
             //putCircleButton(x0, y0: yy0, width: ws.width, height: size, tag: i)
             
-            putImage("busStop", x: iconX0-20, y: yy0+(size-iconSize)/2, width: iconSize, height: iconSize)
+            putImage("busStop", x: iconX0, y: yy0+(size-iconSize)/2, width: iconSize, height: iconSize)
             //putButton(<#str: NSString#>, x0: iconX0, y0: yy0+(size-iconSize)/2, width: iconSize, height: iconSize, tag: i)
             yy0 = yy0 + size + interval;
 //            yy0 = yy0 + interval;
