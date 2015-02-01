@@ -20,6 +20,8 @@ class WaitingBus: UIViewController,UITableViewDelegate, UITableViewDataSource, C
     var isDisplayStationView: Bool!
     var isDisplayBusView: Bool!
     var myButtonNext: UIButton!
+    var DEBUG: Bool!
+    var myImageView: UIImageView!
     
     
     
@@ -28,6 +30,7 @@ class WaitingBus: UIViewController,UITableViewDelegate, UITableViewDataSource, C
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        DEBUG = true;
         
         // ロケーションマネージャの作成.
         myLocationManager = CLLocationManager()
@@ -46,7 +49,7 @@ class WaitingBus: UIViewController,UITableViewDelegate, UITableViewDataSource, C
         }
         
         // BeaconのUUIDを設定.
-        let uuid:NSUUID? = NSUUID(UUIDString: "CB86BC31-05BD-40CC-903D-1C9BD13D9661")
+        let uuid:NSUUID? = NSUUID(UUIDString: "CB86BC31-05BD-40CC-903D-1C9BD13D966A")
         
         // BeaconのIfentifierを設定.
         let identifierStr:NSString = "akabeacon"
@@ -77,19 +80,49 @@ class WaitingBus: UIViewController,UITableViewDelegate, UITableViewDataSource, C
         myTableView.delegate = self
         //self.view.addSubview(myTableView)
         
-        
-        
-        // ボタンの生成する.
-        myButtonNext = UIButton(frame: CGRectMake(0,0,120,50))
-        myButtonNext.backgroundColor = UIColor.redColor();
-        myButtonNext.layer.masksToBounds = true
-        myButtonNext.setTitle("Next", forState: .Normal)
-        myButtonNext.layer.cornerRadius = 20.0
-        myButtonNext.layer.position = CGPoint(x: self.view.bounds.width/2 , y:self.view.bounds.height-50)
-        myButtonNext.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
-        
-        // ボタンを追加する.
-        self.view.addSubview(myButtonNext);
+        //UIntに16進で数値をいれるとUIColorが戻る関数
+        func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+            return UIColor(
+                red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+                green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+                blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+                alpha: CGFloat(1.0)
+            )
+        }
+        //こんな感じで利用します。
+        view.backgroundColor = UIColorFromRGB(0x339999)
+        if(DEBUG == true){
+            // ボタンの生成する.
+            myButtonNext = UIButton(frame: CGRectMake(0,0,120,50))
+            myButtonNext.backgroundColor = UIColor.blueColor();
+            myButtonNext.layer.masksToBounds = true
+            myButtonNext.setTitle("Next", forState: .Normal)
+            myButtonNext.layer.cornerRadius = 20.0
+            myButtonNext.layer.position = CGPoint(x: self.view.bounds.width/2 , y:self.view.bounds.height-50)
+            myButtonNext.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
+            
+            // ボタンを追加する.
+            self.view.addSubview(myButtonNext);
+        }
+        //if(DEBUG == false){
+            //super.viewDidLoad()
+            
+            // UIImageViewを作成する.
+            myImageView = UIImageView(frame: CGRectMake(0,0,200,200))
+            
+            // 表示する画像を設定する.
+            let myImage = UIImage(named: "loading.png")
+            
+            // 画像をUIImageViewに設定する.
+            myImageView.image = myImage
+            
+            // 画像の表示する座標を指定する.
+            myImageView.layer.position = CGPoint(x: self.view.bounds.width/2, y: 400.0)
+            
+            // UIImageViewをViewに追加する.
+            self.view.addSubview(myImageView)
+        //}
+
         
     }
     
@@ -201,9 +234,23 @@ class WaitingBus: UIViewController,UITableViewDelegate, UITableViewDataSource, C
                 
                 var proximity = ""
                 
-                if(majorID == 1 && minorID == 1 && isDisplayBusView == false){
+                if(minorID == 2){
                     isDisplayBusView = true
-                    self.view.addSubview(myButton)
+                    //self.view.addSubview(myButton)
+                    self.myImageView.hidden = true
+                    let myImageView: UIImageView = UIImageView(frame: CGRectMake(0,0,200,200))
+                    
+                    // 表示する画像を設定する.
+                    let myImage = UIImage(named: "ok.png")
+                    
+                    // 画像をUIImageViewに設定する.
+                    myImageView.image = myImage
+                    
+                    // 画像の表示する座標を指定する.
+                    myImageView.layer.position = CGPoint(x: self.view.bounds.width/2, y: 400.0)
+                    
+                    // UIImageViewをViewに追加する.
+                    self.view.addSubview(myImageView)
                 }
                 
                 switch (beacon.proximity) {
@@ -339,6 +386,4 @@ class WaitingBus: UIViewController,UITableViewDelegate, UITableViewDataSource, C
         self.myWindow.addSubview(myImageView)
         
     }
-    
- 
 }

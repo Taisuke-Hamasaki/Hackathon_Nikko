@@ -104,14 +104,14 @@ view.backgroundColor = UIColorFromRGB(0x339999)
         // ボタンを追加する.
         self.view.addSubview(myButtonNext);
         }
-        if(DEBUG == false){
+        //if(DEBUG == false){
                 //super.viewDidLoad()
                 
                 // UIImageViewを作成する.
                 let myImageView: UIImageView = UIImageView(frame: CGRectMake(0,0,180,240))
                 
                 // 表示する画像を設定する.
-                let myImage = UIImage(named: "title_img.png")
+                let myImage = UIImage(named: "title_img-2.png")
                 
                 // 画像をUIImageViewに設定する.
                 myImageView.image = myImage
@@ -121,7 +121,7 @@ view.backgroundColor = UIColorFromRGB(0x339999)
                 
                 // UIImageViewをViewに追加する.
                 self.view.addSubview(myImageView)
-        }
+        //}
         
     }
     
@@ -389,7 +389,8 @@ view.backgroundColor = UIColorFromRGB(0x339999)
     func onClickMyButton(sender: UIButton){
         
         // 遷移するViewを定義する.
-        let mySecondViewController: UIViewController = ListView()
+        //let mySecondViewController: UIViewController = ListView()
+        let mySecondViewController: UIViewController = WaitingBus()
         
         // アニメーションを設定する.
         mySecondViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
