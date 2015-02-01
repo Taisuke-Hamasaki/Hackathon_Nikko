@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		530361381A7E020800C6F020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530361371A7E020800C6F020 /* AppDelegate.swift */; };
+		5303613D1A7E020800C6F020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5303613B1A7E020800C6F020 /* Main.storyboard */; };
+		5303613F1A7E020800C6F020 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5303613E1A7E020800C6F020 /* Images.xcassets */; };
+		530361421A7E020800C6F020 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 530361401A7E020800C6F020 /* LaunchScreen.xib */; };
+		5303614E1A7E020800C6F020 /* NikkoBus4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303614D1A7E020800C6F020 /* NikkoBus4Tests.swift */; };
+		530361581A7E023700C6F020 /* BeaconIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530361571A7E023700C6F020 /* BeaconIO.swift */; };
+		5303615A1A7E028200C6F020 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530361591A7E028200C6F020 /* ListView.swift */; };
+		5303615E1A7E02AB00C6F020 /* WaitingBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303615D1A7E02AB00C6F020 /* WaitingBus.swift */; };
+		530361601A7E02B900C6F020 /* WindowSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303615F1A7E02B900C6F020 /* WindowSize.swift */; };
+		530361631A7E032400C6F020 /* 4 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 530361611A7E032400C6F020 /* 4 2.jpg */; };
+		530361641A7E032400C6F020 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 530361621A7E032400C6F020 /* 4.jpg */; };
+		530361691A7E032A00C6F020 /* busStop.png in Resources */ = {isa = PBXBuildFile; fileRef = 530361651A7E032A00C6F020 /* busStop.png */; };
+		5303616A1A7E032A00C6F020 /* current_block.png in Resources */ = {isa = PBXBuildFile; fileRef = 530361661A7E032A00C6F020 /* current_block.png */; };
+		5303616B1A7E032A00C6F020 /* currentBusStation.png in Resources */ = {isa = PBXBuildFile; fileRef = 530361671A7E032A00C6F020 /* currentBusStation.png */; };
+		5303616C1A7E032A00C6F020 /* currentBusStop.png in Resources */ = {isa = PBXBuildFile; fileRef = 530361681A7E032A00C6F020 /* currentBusStop.png */; };
+		530361741A7E033000C6F020 /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 5303616D1A7E033000C6F020 /* loading.png */; };
+		530361751A7E033000C6F020 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5303616E1A7E033000C6F020 /* logo.png */; };
+		530361761A7E033000C6F020 /* mountain.png in Resources */ = {isa = PBXBuildFile; fileRef = 5303616F1A7E033000C6F020 /* mountain.png */; };
+		530361771A7E033000C6F020 /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 530361701A7E033000C6F020 /* ok.png */; };
+		530361781A7E033000C6F020 /* shrine.png in Resources */ = {isa = PBXBuildFile; fileRef = 530361711A7E033000C6F020 /* shrine.png */; };
+		530361791A7E033000C6F020 /* title_img-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 530361721A7E033000C6F020 /* title_img-2.png */; };
+		5303617A1A7E033000C6F020 /* title_img.png in Resources */ = {isa = PBXBuildFile; fileRef = 530361731A7E033000C6F020 /* title_img.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		530361481A7E020800C6F020 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5303612A1A7E020800C6F020 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 530361311A7E020800C6F020;
+			remoteInfo = NikkoBus4;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		530361321A7E020800C6F020 /* NikkoBus4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NikkoBus4.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		530361361A7E020800C6F020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		530361371A7E020800C6F020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5303613C1A7E020800C6F020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5303613E1A7E020800C6F020 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		530361411A7E020800C6F020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		530361471A7E020800C6F020 /* NikkoBus4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NikkoBus4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5303614C1A7E020800C6F020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5303614D1A7E020800C6F020 /* NikkoBus4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NikkoBus4Tests.swift; sourceTree = "<group>"; };
+		530361571A7E023700C6F020 /* BeaconIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconIO.swift; sourceTree = "<group>"; };
+		530361591A7E028200C6F020 /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		5303615D1A7E02AB00C6F020 /* WaitingBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingBus.swift; sourceTree = "<group>"; };
+		5303615F1A7E02B900C6F020 /* WindowSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowSize.swift; sourceTree = "<group>"; };
+		530361611A7E032400C6F020 /* 4 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "4 2.jpg"; sourceTree = "<group>"; };
+		530361621A7E032400C6F020 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		530361651A7E032A00C6F020 /* busStop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = busStop.png; sourceTree = "<group>"; };
+		530361661A7E032A00C6F020 /* current_block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = current_block.png; sourceTree = "<group>"; };
+		530361671A7E032A00C6F020 /* currentBusStation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = currentBusStation.png; sourceTree = "<group>"; };
+		530361681A7E032A00C6F020 /* currentBusStop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = currentBusStop.png; sourceTree = "<group>"; };
+		5303616D1A7E033000C6F020 /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading.png; sourceTree = "<group>"; };
+		5303616E1A7E033000C6F020 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		5303616F1A7E033000C6F020 /* mountain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mountain.png; sourceTree = "<group>"; };
+		530361701A7E033000C6F020 /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
+		530361711A7E033000C6F020 /* shrine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shrine.png; sourceTree = "<group>"; };
+		530361721A7E033000C6F020 /* title_img-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title_img-2.png"; sourceTree = "<group>"; };
+		530361731A7E033000C6F020 /* title_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title_img.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5303612F1A7E020800C6F020 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		530361441A7E020800C6F020 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		530361291A7E020800C6F020 = {
+			isa = PBXGroup;
+			children = (
+				530361341A7E020800C6F020 /* NikkoBus4 */,
+				5303614A1A7E020800C6F020 /* NikkoBus4Tests */,
+				530361331A7E020800C6F020 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		530361331A7E020800C6F020 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				530361321A7E020800C6F020 /* NikkoBus4.app */,
+				530361471A7E020800C6F020 /* NikkoBus4Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		530361341A7E020800C6F020 /* NikkoBus4 */ = {
+			isa = PBXGroup;
+			children = (
+				530361371A7E020800C6F020 /* AppDelegate.swift */,
+				530361611A7E032400C6F020 /* 4 2.jpg */,
+				530361621A7E032400C6F020 /* 4.jpg */,
+				5303613B1A7E020800C6F020 /* Main.storyboard */,
+				5303613E1A7E020800C6F020 /* Images.xcassets */,
+				530361401A7E020800C6F020 /* LaunchScreen.xib */,
+				530361351A7E020800C6F020 /* Supporting Files */,
+				530361571A7E023700C6F020 /* BeaconIO.swift */,
+				530361591A7E028200C6F020 /* ListView.swift */,
+				530361651A7E032A00C6F020 /* busStop.png */,
+				530361661A7E032A00C6F020 /* current_block.png */,
+				5303616D1A7E033000C6F020 /* loading.png */,
+				5303616E1A7E033000C6F020 /* logo.png */,
+				5303616F1A7E033000C6F020 /* mountain.png */,
+				530361701A7E033000C6F020 /* ok.png */,
+				530361711A7E033000C6F020 /* shrine.png */,
+				530361721A7E033000C6F020 /* title_img-2.png */,
+				530361731A7E033000C6F020 /* title_img.png */,
+				530361671A7E032A00C6F020 /* currentBusStation.png */,
+				530361681A7E032A00C6F020 /* currentBusStop.png */,
+				5303615D1A7E02AB00C6F020 /* WaitingBus.swift */,
+				5303615F1A7E02B900C6F020 /* WindowSize.swift */,
+			);
+			path = NikkoBus4;
+			sourceTree = "<group>";
+		};
+		530361351A7E020800C6F020 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				530361361A7E020800C6F020 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5303614A1A7E020800C6F020 /* NikkoBus4Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5303614D1A7E020800C6F020 /* NikkoBus4Tests.swift */,
+				5303614B1A7E020800C6F020 /* Supporting Files */,
+			);
+			path = NikkoBus4Tests;
+			sourceTree = "<group>";
+		};
+		5303614B1A7E020800C6F020 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5303614C1A7E020800C6F020 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		530361311A7E020800C6F020 /* NikkoBus4 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 530361511A7E020900C6F020 /* Build configuration list for PBXNativeTarget "NikkoBus4" */;
+			buildPhases = (
+				5303612E1A7E020800C6F020 /* Sources */,
+				5303612F1A7E020800C6F020 /* Frameworks */,
+				530361301A7E020800C6F020 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NikkoBus4;
+			productName = NikkoBus4;
+			productReference = 530361321A7E020800C6F020 /* NikkoBus4.app */;
+			productType = "com.apple.product-type.application";
+		};
+		530361461A7E020800C6F020 /* NikkoBus4Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 530361541A7E020900C6F020 /* Build configuration list for PBXNativeTarget "NikkoBus4Tests" */;
+			buildPhases = (
+				530361431A7E020800C6F020 /* Sources */,
+				530361441A7E020800C6F020 /* Frameworks */,
+				530361451A7E020800C6F020 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				530361491A7E020800C6F020 /* PBXTargetDependency */,
+			);
+			name = NikkoBus4Tests;
+			productName = NikkoBus4Tests;
+			productReference = 530361471A7E020800C6F020 /* NikkoBus4Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5303612A1A7E020800C6F020 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "字大　太郎";
+				TargetAttributes = {
+					530361311A7E020800C6F020 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					530361461A7E020800C6F020 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 530361311A7E020800C6F020;
+					};
+				};
+			};
+			buildConfigurationList = 5303612D1A7E020800C6F020 /* Build configuration list for PBXProject "NikkoBus4" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 530361291A7E020800C6F020;
+			productRefGroup = 530361331A7E020800C6F020 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				530361311A7E020800C6F020 /* NikkoBus4 */,
+				530361461A7E020800C6F020 /* NikkoBus4Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		530361301A7E020800C6F020 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				530361771A7E033000C6F020 /* ok.png in Resources */,
+				530361741A7E033000C6F020 /* loading.png in Resources */,
+				530361631A7E032400C6F020 /* 4 2.jpg in Resources */,
+				530361751A7E033000C6F020 /* logo.png in Resources */,
+				5303613D1A7E020800C6F020 /* Main.storyboard in Resources */,
+				5303616C1A7E032A00C6F020 /* currentBusStop.png in Resources */,
+				530361791A7E033000C6F020 /* title_img-2.png in Resources */,
+				530361691A7E032A00C6F020 /* busStop.png in Resources */,
+				530361761A7E033000C6F020 /* mountain.png in Resources */,
+				530361421A7E020800C6F020 /* LaunchScreen.xib in Resources */,
+				5303616A1A7E032A00C6F020 /* current_block.png in Resources */,
+				530361641A7E032400C6F020 /* 4.jpg in Resources */,
+				5303613F1A7E020800C6F020 /* Images.xcassets in Resources */,
+				530361781A7E033000C6F020 /* shrine.png in Resources */,
+				5303617A1A7E033000C6F020 /* title_img.png in Resources */,
+				5303616B1A7E032A00C6F020 /* currentBusStation.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		530361451A7E020800C6F020 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5303612E1A7E020800C6F020 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				530361601A7E02B900C6F020 /* WindowSize.swift in Sources */,
+				5303615A1A7E028200C6F020 /* ListView.swift in Sources */,
+				530361581A7E023700C6F020 /* BeaconIO.swift in Sources */,
+				530361381A7E020800C6F020 /* AppDelegate.swift in Sources */,
+				5303615E1A7E02AB00C6F020 /* WaitingBus.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		530361431A7E020800C6F020 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5303614E1A7E020800C6F020 /* NikkoBus4Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		530361491A7E020800C6F020 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 530361311A7E020800C6F020 /* NikkoBus4 */;
+			targetProxy = 530361481A7E020800C6F020 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5303613B1A7E020800C6F020 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5303613C1A7E020800C6F020 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		530361401A7E020800C6F020 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				530361411A7E020800C6F020 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5303614F1A7E020900C6F020 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		530361501A7E020900C6F020 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		530361521A7E020900C6F020 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NikkoBus4/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		530361531A7E020900C6F020 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NikkoBus4/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		530361551A7E020900C6F020 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NikkoBus4Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NikkoBus4.app/NikkoBus4";
+			};
+			name = Debug;
+		};
+		530361561A7E020900C6F020 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NikkoBus4Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NikkoBus4.app/NikkoBus4";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5303612D1A7E020800C6F020 /* Build configuration list for PBXProject "NikkoBus4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5303614F1A7E020900C6F020 /* Debug */,
+				530361501A7E020900C6F020 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		530361511A7E020900C6F020 /* Build configuration list for PBXNativeTarget "NikkoBus4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				530361521A7E020900C6F020 /* Debug */,
+				530361531A7E020900C6F020 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		530361541A7E020900C6F020 /* Build configuration list for PBXNativeTarget "NikkoBus4Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				530361551A7E020900C6F020 /* Debug */,
+				530361561A7E020900C6F020 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5303612A1A7E020800C6F020 /* Project object */;
+}
