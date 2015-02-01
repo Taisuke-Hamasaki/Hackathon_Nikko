@@ -11,7 +11,12 @@ import Foundation
 
 // window size
 class WindowSize {
-    let size = UIScreen.mainScreen().applicationFrame.size;
-    let width = UIScreen.mainScreen().applicationFrame.size.width;
-    let height = UIScreen.mainScreen().applicationFrame.size.height;
+    var width: CGFloat
+    var height: CGFloat
+    
+    init() {
+        var size = UIScreen.mainScreen().applicationFrame.size;
+        width = UIScreen.mainScreen().applicationFrame.size.width;
+        height = UIScreen.mainScreen().applicationFrame.size.height;
+    }
 }
