@@ -12,7 +12,7 @@ class ListView: UIViewController {
     
     var ws: WindowSize = WindowSize()
     
-    var busStations: = ["東武日光駅",
+    var busStations: [NSString] = ["東武日光駅",
         "Ishiya-machi",
         "Goko-machi",
         "Nikko kyodosentamae",
@@ -41,7 +41,7 @@ class ListView: UIViewController {
             //putButton(x1, y0: yy0, width: ws.width, height: size, tag: i)
             //putCircleButton(x1, y0: yy0, width: ws.width, height: size, tag: i)
             
-            putImage(<#filename: NSString#>, <#UIImageView#>, x: <#CGFloat#>, y: <#CGFloat#>, width: <#CGFloat#>, height: <#CGFloat#>)
+            putImage(busStations[i], x: 0, y: 0, width: 100, height: 100)
             yy0 = yy0 + interval;
             
         
@@ -180,7 +180,7 @@ class ListView: UIViewController {
         //self.view.addSubview(mySystemButton)
     }
     
-    func putImage(filename: NSString, UIImageView, x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
+    func putImage(filename: NSString, x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
         // UIImageViewを作成する.
         let myImageView: UIImageView = UIImageView(frame: CGRectMake(x, y, width, height))
         
