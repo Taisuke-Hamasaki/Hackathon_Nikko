@@ -25,6 +25,20 @@
 			remoteGlobalIDString = 530117041A7DBB4800D274EA;
 			remoteInfo = NikkoBus;
 		};
+		530360781A7DE3A000C6F020 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5303606B1A7DE35900C6F020 /* iBeaconView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 530360461A7DE35900C6F020;
+			remoteInfo = iBeaconView;
+		};
+		5303607A1A7DE3A000C6F020 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5303606B1A7DE35900C6F020 /* iBeaconView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5303605B1A7DE35900C6F020;
+			remoteInfo = iBeaconViewTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +53,7 @@
 		5301171F1A7DBB4800D274EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		530117201A7DBB4800D274EA /* NikkoBusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NikkoBusTests.swift; sourceTree = "<group>"; };
 		5301172A1A7DBB9000D274EA /* BeaconIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconIO.swift; sourceTree = "<group>"; };
+		5303606B1A7DE35900C6F020 /* iBeaconView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iBeaconView.xcodeproj; path = NikkoBus/iBeaconView/iBeaconView.xcodeproj; sourceTree = "<group>"; };
 		906F78DA1A7DE1FC006300F9 /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +81,7 @@
 				530117071A7DBB4800D274EA /* NikkoBus */,
 				5301171D1A7DBB4800D274EA /* NikkoBusTests */,
 				530117061A7DBB4800D274EA /* Products */,
+				5303606B1A7DE35900C6F020 /* iBeaconView.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +132,15 @@
 				5301171F1A7DBB4800D274EA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		530360741A7DE3A000C6F020 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				530360791A7DE3A000C6F020 /* iBeaconView.app */,
+				5303607B1A7DE3A000C6F020 /* iBeaconViewTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +210,12 @@
 			mainGroup = 530116FC1A7DBB4800D274EA;
 			productRefGroup = 530117061A7DBB4800D274EA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 530360741A7DE3A000C6F020 /* Products */;
+					ProjectRef = 5303606B1A7DE35900C6F020 /* iBeaconView.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				530117041A7DBB4800D274EA /* NikkoBus */,
@@ -192,6 +223,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		530360791A7DE3A000C6F020 /* iBeaconView.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = iBeaconView.app;
+			remoteRef = 530360781A7DE3A000C6F020 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5303607B1A7DE3A000C6F020 /* iBeaconViewTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = iBeaconViewTests.xctest;
+			remoteRef = 5303607A1A7DE3A000C6F020 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		530117031A7DBB4800D274EA /* Resources */ = {

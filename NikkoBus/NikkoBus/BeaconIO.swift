@@ -363,7 +363,7 @@ class BeaconIO: UIViewController,UITableViewDelegate, UITableViewDataSource, CLL
         return cell!
     }
     
-    //ビーコン受信時に出す表示関数
+    //ビーコン受信時に出す表示関数 未使用
     func makeMyWindow(){
         
         
