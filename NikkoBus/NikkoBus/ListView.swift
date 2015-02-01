@@ -168,7 +168,7 @@ class ListView: UIViewController {
         //self.view.addSubview(mySystemButton)
     }
     
-    func putImage(filename: NSSting : UIImageView, x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
+    func putImage(filename: NSString, UIImageView, x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
         // UIImageViewを作成する.
         let myImageView: UIImageView = UIImageView(frame: CGRectMake(x, y, width, height))
         
