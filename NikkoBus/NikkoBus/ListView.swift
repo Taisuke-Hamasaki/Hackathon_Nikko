@@ -12,6 +12,15 @@ class ListView: UIViewController {
     
     var ws: WindowSize = WindowSize()
     
+    var busStations: = ["東武日光駅",
+        "Ishiya-machi",
+        "Goko-machi",
+        "Nikko kyodosentamae",
+        "Shinkyo",
+        "Nishisando",
+        "Nikko Botanical Garden"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -29,10 +38,13 @@ class ListView: UIViewController {
             yy0 = yy0 + size;
             //var y1: CGFloat = size * CGFloat(i)
             //var y2: CGFloat = y1 + size
-            putButton(x1, y0: yy0, width: ws.width, height: size, tag: i)
-            putCircleButton(x1, y0: yy0, width: ws.width, height: size, tag: i)
+            //putButton(x1, y0: yy0, width: ws.width, height: size, tag: i)
+            //putCircleButton(x1, y0: yy0, width: ws.width, height: size, tag: i)
             
+            putImage(<#filename: NSString#>, <#UIImageView#>, x: <#CGFloat#>, y: <#CGFloat#>, width: <#CGFloat#>, height: <#CGFloat#>)
             yy0 = yy0 + interval;
+            
+        
         }
         
         
