@@ -44,7 +44,7 @@ class ListView: UIViewController {
         var iconSize:CGFloat = size * (3/5);
         var iconX0: CGFloat = 2;
         
-        putImage("currentBusStation", x: 0, y: 0, width: ws.width*1.2, height: yStart-1)
+        putImage("currentBusStation", x: 0, y: 0, width: ws.width*1.25, height: yStart-1)
         var yy0 = yStart;
         for i in 0 ... Int(nButtons)-1{
             var x0: CGFloat = interval
@@ -53,7 +53,8 @@ class ListView: UIViewController {
             putButton(busStations[i], x0:x0, y0: yy0, width: ws.width, height: size, tag: i)
             //putCircleButton(x0, y0: yy0, width: ws.width, height: size, tag: i)
             
-            putImage(busStations[i], x: iconX0, y: yy0+iconSize/2, width: iconSize, height: iconSize)
+            putImage("current_block", x: iconX0, y: yy0+iconSize/2, width: iconSize, height: iconSize)
+            //putButton(<#str: NSString#>, x0: <#CGFloat#>, y0: <#CGFloat#>, width: <#CGFloat#>, height: <#CGFloat#>, tag: <#Int#>)
             yy0 = yy0 + size + interval;
 //            yy0 = yy0 + interval;
             
@@ -113,7 +114,7 @@ class ListView: UIViewController {
         myButton.frame = CGRectMake(x0, y0, width, height)
         
         // 背景色を設定する.
-        myButton.backgroundColor = UIColor.whiteColor()
+        myButton.backgroundColor = UIColor.cyanColor()
         
         // mySystemButtonに枠を追加する.
         //myButton.frame = CGRectMake(x0, y0, width, height)
@@ -123,7 +124,7 @@ class ListView: UIViewController {
         
         // タイトルを設定する(通常時).
         myButton.setTitle(str, forState: UIControlState.Normal)
-        myButton.setTitleColor(UIColor.cyanColor(), forState: UIControlState.Normal)
+        myButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
 
         
         // タイトルを設定する(ボタンがハイライトされた時).
