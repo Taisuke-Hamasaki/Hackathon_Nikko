@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // ViewControllerを生成する.
-        let myFirstViewController: ListView = ListView()
+        let myFirstViewController: BeaconIO = BeaconIO()
         
         // UIWindowを生成する.
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)

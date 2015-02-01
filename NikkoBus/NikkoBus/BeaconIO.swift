@@ -19,11 +19,9 @@ class BeaconIO: UIViewController,UITableViewDelegate, UITableViewDataSource, CLL
     var myUuids: NSMutableArray!
     var isDisplayStationView: Bool!
     var isDisplayBusView: Bool!
+    var myButtonNext: UIButton!
     
-    required init(coder aDecoder: NSCoder)
-    {
-        super.init(coder: aDecoder)
-    }
+
     
     let myButton: UIButton = UIButton()
     
@@ -80,66 +78,18 @@ class BeaconIO: UIViewController,UITableViewDelegate, UITableViewDataSource, CLL
         //self.view.addSubview(myTableView)
         
         
-        // サイズを設定する.
-        myButton.frame = CGRectMake(0,0,200,40)
         
-        // 背景色を設定する.
-        myButton.backgroundColor = UIColor.redColor()
+        // ボタンの生成する.
+        myButtonNext = UIButton(frame: CGRectMake(0,0,120,50))
+        myButtonNext.backgroundColor = UIColor.redColor();
+        myButtonNext.layer.masksToBounds = true
+        myButtonNext.setTitle("Next", forState: .Normal)
+        myButtonNext.layer.cornerRadius = 20.0
+        myButtonNext.layer.position = CGPoint(x: self.view.bounds.width/2 , y:self.view.bounds.height-50)
+        myButtonNext.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
         
-        // 枠を丸くする.
-        myButton.layer.masksToBounds = true
-        
-        // タイトルを設定する(通常時).
-        myButton.setTitle("ボタン(通常)", forState: UIControlState.Normal)
-        myButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        
-        // タイトルを設定する(ボタンがハイライトされた時).
-        myButton.setTitle("ボタン(押された時)", forState: UIControlState.Highlighted)
-        myButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Highlighted)
-        
-        // コーナーの半径を設定する.
-        myButton.layer.cornerRadius = 20.0
-        
-        // ボタンの位置を指定する.
-        myButton.layer.position = CGPoint(x: self.view.frame.width/2, y:200)
-        
-        // タグを設定する.
-        myButton.tag = 1
-        
-        // イベントを追加する.
-        //myButton.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
-        
-        // サイズを設定する.
-        myButton.frame = CGRectMake(0,0,200,40)
-        
-        // 背景色を設定する.
-        myButton.backgroundColor = UIColor.redColor()
-        
-        // 枠を丸くする.
-        myButton.layer.masksToBounds = true
-        
-        // タイトルを設定する(通常時).
-        myButton.setTitle("ボタン(通常)", forState: UIControlState.Normal)
-        myButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        
-        // タイトルを設定する(ボタンがハイライトされた時).
-        myButton.setTitle("ボタン(押された時)", forState: UIControlState.Highlighted)
-        myButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Highlighted)
-        
-        // コーナーの半径を設定する.
-        myButton.layer.cornerRadius = 20.0
-        
-        // ボタンの位置を指定する.
-        myButton.layer.position = CGPoint(x: self.view.frame.width/2, y:200)
-        
-        // タグを設定する.
-        myButton.tag = 1
-        
-        // イベントを追加する.
-        //myButton.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
-        
-        // ボタンをViewに追加する.
-        //self.view.addSubview(myButton)
+        // ボタンを追加する.
+        self.view.addSubview(myButtonNext);
         
     }
     
@@ -387,6 +337,24 @@ class BeaconIO: UIViewController,UITableViewDelegate, UITableViewDataSource, CLL
         let myImageView: UIImageView = UIImageView(frame:  CGRect(x: self.myWindow.frame.width/2 - 60, y: 5, width: 100, height: 100))
         myImageView.image = myImage
         self.myWindow.addSubview(myImageView)
+        
+    }
+    
+    
+    
+    //
+    // ボタンイベント
+    //
+    func onClickMyButton(sender: UIButton){
+        
+        // 遷移するViewを定義する.
+        let mySecondViewController: UIViewController = ListView()
+        
+        // アニメーションを設定する.
+        mySecondViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+        
+        // Viewの移動する.
+        self.presentViewController(mySecondViewController, animated: true, completion: nil)
         
     }
 }
