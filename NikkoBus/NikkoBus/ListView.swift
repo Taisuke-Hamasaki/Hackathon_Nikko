@@ -30,23 +30,28 @@ class ListView: UIViewController {
         var nButtons: CGFloat = 10 ////// the number of all buttons
         var nShowButtons: CGFloat = 6 // the number of showing buttons on the display
         var interval: CGFloat = 2 // [pixel]
-        let size: CGFloat = 100 //ws.height / nShowButtons
+        let size: CGFloat = ws.height / nShowButtons
         var yStart = size + interval
         
+        var iconSize:CGFloat = size * (3/5);
+        var iconX0: CGFloat = 2;
+        
+        putImage("bussStop", x: 0, y: 0, width: ws.width, height: yStart-1)
         var yy0 = yStart;
         for i in 0 ... Int(nButtons)-1{
             var x1: CGFloat = interval
-            yy0 = yy0 + size;
             //var y1: CGFloat = size * CGFloat(i)
             //var y2: CGFloat = y1 + size
-            //putButton(x1, y0: yy0, width: ws.width, height: size, tag: i)
+            putButton(x1, y0: yy0, width: ws.width, height: size, tag: i)
             //putCircleButton(x1, y0: yy0, width: ws.width, height: size, tag: i)
             
-            putImage("aa", x: 0, y: 0, width: 100, height: 100)
-            yy0 = yy0 + interval;
+            putImage("bussStop", x: iconX0, y: yy0+iconSize/2, width: iconSize, height: iconSize)
+            yy0 = yy0 + size + interval;
+//            yy0 = yy0 + interval;
             
         
         }
+        
         
         
     }
