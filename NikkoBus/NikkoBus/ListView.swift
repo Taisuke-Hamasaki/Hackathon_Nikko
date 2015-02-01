@@ -199,4 +199,21 @@ class ListView: UIViewController {
         
     }
     
+    // myButtonNext.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside) <-
+    //
+    // ボタンイベント
+    //
+    func onClickMyButton(sender: UIButton){
+        
+        // 遷移するViewを定義する.
+        let myThirdViewController: UIViewController = WaitingBus()
+        
+        // アニメーションを設定する.
+        myThirdViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+        
+        // Viewの移動する.
+        self.presentViewController(myThirdViewController, animated: true, completion: nil)
+        
+    }
+    
 }
