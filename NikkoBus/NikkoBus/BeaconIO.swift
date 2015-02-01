@@ -17,6 +17,8 @@ class BeaconIO: UIViewController,UITableViewDelegate, UITableViewDataSource, CLL
     var myTableView: UITableView!
     var myIds: NSMutableArray!
     var myUuids: NSMutableArray!
+    var isDisplayStationView: Bool!
+    var isDisplayBusView: Bool!
     
     required init(coder aDecoder: NSCoder)
     {
@@ -195,7 +197,7 @@ class BeaconIO: UIViewController,UITableViewDelegate, UITableViewDataSource, CLL
         case .Inside: // リージョン内にいる
             println("CLRegionStateInside:");
             
-            self.view.addSubview(myButton)
+            //self.view.addSubview(myButton)
             //println("*************");
             
             // STEP5: すでに入っている場合は、そのままRangingをスタートさせる
@@ -248,6 +250,11 @@ class BeaconIO: UIViewController,UITableViewDelegate, UITableViewDataSource, CLL
                 println("RSSI: \(rssi)");
                 
                 var proximity = ""
+                
+                if(majorID == 1 && minorID == 1 && isDisplayBusView == false){
+                    isDisplayBusView = true
+                    self.view.addSubview(myButton)
+                }
                 
                 switch (beacon.proximity) {
                 case CLProximity.Unknown:
